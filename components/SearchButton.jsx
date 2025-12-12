@@ -1,26 +1,23 @@
 import {
+  Image,
   StyleSheet,
   Text,
   TouchableOpacity,
   useWindowDimensions,
 } from 'react-native';
 
-const MyButton = ({ buttonText }) => {
-  const { width } = useWindowDimensions();
-
-  return (
-    <TouchableOpacity style={styles.myButton}>
-      <Text style={styles.buttonTitle}>{buttonText}</Text>
-    </TouchableOpacity>
-  );
-};
+const SearchButton = () => (
+  <TouchableOpacity style={styles.searchButton}>
+    <Image source={require('../icons/Search.png')} />
+  </TouchableOpacity>
+);
 
 const styles = StyleSheet.create({
-  myButton: {
-    height: 50,
-    width: '80%',
+  searchButton: {
+    height: 42,
+    width: 56,
     borderRadius: 50,
-    backgroundColor: '#e38700',
+    backgroundColor: '#ffddaa',
     alignItems: 'center', // горизонталь
     justifyContent: 'center', // вертикаль
   },
@@ -32,4 +29,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MyButton;
+export default SearchButton;
